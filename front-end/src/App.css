@@ -1,12 +1,12 @@
 #board {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #aaacfd;
-  padding: 10px
+  background-color: #070838;
+  padding: 5px
 }
 
 .cell {
-  background-color: rgba(255, 154, 154, 0.8);
+  background-color: rgba(249, 91, 91, 0.8);
   border: 1px solid rgba(88, 4, 4, 0.8);
   padding: 20px;
   font-size: 30px;
@@ -28,13 +28,30 @@
 }
 
 #bottombar button {
+  border: 0px;
+  transition-duration: 0.2s;
   width: 50%;
   /* height: 100%; */
-  margin: 0;
-  padding: 0;
+  margin: 10;
+  padding: 10;
   position: relative;
   float: left;
   font-size: 2vw
+}
+
+#newGameButton:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+
+#undoButton:hover {
+  background-color: #ff2e2e; /* Green */
+  color: white;
+}
+
+#cellText {
+  text-align: center;
+  font-size: 70px;
 }
 
 html,
@@ -44,4 +61,4 @@ body {
   padding: 0;
 }
 
-.playable { background-color: green;}
+.playable { background-color: rgb(169, 255, 169);}

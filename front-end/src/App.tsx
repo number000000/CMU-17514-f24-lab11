@@ -144,9 +144,9 @@ class App extends React.Component<Props, GameState> {
           {this.state.cells.map((cell, i) => this.createCell(cell, i))}
         </div>
         <div id="bottombar">
-          <button onClick={/* get the function, not call the function */this.newGame}>New Game</button>
+          <button id="newGameButton" onClick={/* get the function, not call the function */this.newGame}>New Game</button>
           {/* Exercise: implement Undo function */}
-          <button onClick={/* get the function, not call the function */this.undo}>Undo</button>
+          <button id="undoButton" onClick={/* get the function, not call the function */this.undo}>Undo</button>
         </div>
       </div>
     );
