@@ -40,6 +40,10 @@ public class Game {
         return this.player;
     }
 
+    public List<Game> getHistory(){
+        return this.history;
+    }
+
     public Game play(int x, int y) {
         if (this.board.getCell(x, y) != null)
             return this;

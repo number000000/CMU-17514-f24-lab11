@@ -90,7 +90,7 @@ class App extends React.Component<Props, GameState> {
   }
 
   createInstruction(player: number, winner: number): React.ReactNode {
-    if(winner == -1){
+    if(winner === -1){
       return (
         <p> <b>Current Player:</b> Player {player} <br></br> <b>Winner:</b> no winner</p>
       )
@@ -100,6 +100,12 @@ class App extends React.Component<Props, GameState> {
         <p> <b>Current Player:</b> Player {player} <br></br> <b>Winner:</b> Player {winner} </p>
     )
     }
+  }
+
+  undo = async () => {
+    const response = await fetch('/undo');
+    const json = await response.json();
+    this.setState({ cells: json['cells'], player: json['player'], winner: json['winner']});
   }
 
   /**
@@ -140,7 +146,7 @@ class App extends React.Component<Props, GameState> {
         <div id="bottombar">
           <button onClick={/* get the function, not call the function */this.newGame}>New Game</button>
           {/* Exercise: implement Undo function */}
-          <button>Undo</button>
+          <button onClick={/* get the function, not call the function */this.undo}>Undo</button>
         </div>
       </div>
     );

@@ -18,6 +18,7 @@ public class GameState {
         Cell[] cells = getCells(game);
         Player player = game.getPlayer();
         Player winner = game.getWinner();
+
         return new GameState(cells, player, winner);
     }
 
